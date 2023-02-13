@@ -1,4 +1,4 @@
-const {Sequelize,DataTypes} = require('sequelize')
+const {Sequelize} = require('sequelize')
 const databaseConfig = require('../config/db')
 
 const sequelize = new Sequelize(
@@ -9,7 +9,8 @@ const sequelize = new Sequelize(
         host: databaseConfig.DATABASE_HOST,
         dialect: databaseConfig.DIALECT
     }
-)
+);
+
 
 sequelize.authenticate().then(()=>{
     console.log('Database connection successful')
