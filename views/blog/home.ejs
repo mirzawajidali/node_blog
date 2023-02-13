@@ -1,0 +1,19 @@
+<%- include('../includes/header.ejs'); -%>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 text-center offset-md-2">
+                <h1>List of Blogs</h1>
+                
+                <% posts.forEach(function(post) { %>
+                    <div class="card">
+                        <div class="card-body">
+                            <h1><%= post.title %></h1>
+                            <p><%= post.body %></p>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+<%- include('../includes/footer.ejs'); -%>
+  
