@@ -13,7 +13,7 @@ const Post = sequelize.define("post", {
     },
 });
 
-sequelize.sync({force:true}).then(() => {
+sequelize.sync({force:false}).then(() => {
     console.log("posts table create.")
 }).catch(error => {
     console.log(error)

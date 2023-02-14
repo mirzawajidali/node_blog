@@ -11,6 +11,5 @@ module.exports.create = async (req,res) => {
 
 module.exports.show = async (req,res) => {
     let posts = await Post.findAll({})
-    console.log(posts)
     return res.render('blog/home',{posts: posts})
 }

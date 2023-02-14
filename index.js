@@ -7,6 +7,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 const PORT = process.env.PORT || 3000
 const PostRoutes = require('./routes/post')
+const AuthRoutes = require('./routes/auth')
 
 
 app.use(express.urlencoded({extended:false}))
@@ -14,6 +15,7 @@ app.use(express.json())
 app.set('view engine', 'ejs');
 app.set('views',path.resolve('./views'))
 
+app.use('/',AuthRoutes);
 app.use('/post',PostRoutes);
 
 app.get('/',(req,res) => {
