@@ -3,11 +3,17 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card">
+                    <% if (locals.success) { %>
+                        <div class="alert alert-success">
+                            <%= success %>
+                        </div>
+                    <% } %>
+                     
                     <div class="card-header">
                         <h3>Registeration Form</h3>
                     </div>
                     <div class="card-body">
-                        <form action="/signup" method="POST">
+                        <form action="/register" method="POST">
                             <div class="form-group mb-2">
                                 <label for="">Name</label>
                                 <input type="text" class="form-control" name="name" id="name">
